@@ -122,6 +122,8 @@ ul a:hover {
 
 #bigwork {
     flex-basis: 100%;
+    width: auto;
+    height: auto;
 }
 
 /* WORK IMAGE LABELS */
