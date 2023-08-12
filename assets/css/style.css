@@ -83,3 +83,25 @@ ul {
 
 /* WORK IMAGES */
 
+.works {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    flex-basis: 1000px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.works img {
+    width: 50px;
+    height: 50px;
+    flex-basis: 50%;
+}
+
+#bigwork {
+    height: 300px;
+    width: 500px;
+    padding: 10px;
+    margin: 20px;
+    flex-basis: 100%;
+}
