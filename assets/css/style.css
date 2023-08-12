@@ -13,7 +13,7 @@ header h1 {
     font-weight: bold;
     font-style: italic;
     font-size: 2.5em;
-    color: grey;
+    color: black;
     background-color: lightgrey;
     padding: 5px 20px 0px 50px;
     
@@ -49,5 +49,33 @@ ul {
     background-size: cover;
 }
 
-/* ABOUT ME */
+/* SECTIONS */
+
+.section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 100%
+}
+
+.section h2 {
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 3em;
+    flex-basis: 100px;
+    text-align: right;
+    padding: 10px 20px 10px 10px;
+    margin: 20px;
+    border-right: 2px solid black;
+}
+
+.section p {
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 1.2em;
+    flex-basis: 1200px;
+    text-align: left;
+    padding: 10px;
+    margin: 20px;
+}
 
