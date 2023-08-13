@@ -4,7 +4,7 @@ header {
 display: flex;
 flex-flow: row wrap;
 justify-content: space-between;
-background-color: slategray;
+background-color: grey;
 padding: 22px 0 22px 0;
 }
 
@@ -53,7 +53,7 @@ ul a:hover {
     flex-flow: row wrap;
 }
 
-/* BANNER IMAGE */
+/* BANNER */
 
 #banner {
     object-fit: cover;
@@ -79,7 +79,7 @@ ul a:hover {
 #bannerlabel h3 {
     font-family: sans-serif;
     font-size: 2em;
-    padding: 20px 200px 20px 20px;
+    padding: 3px 150px 3px 20px;
 }
 
 /* ------------- SECTIONS START ------------- */
@@ -126,8 +126,8 @@ ul a:hover {
 }
 
 .imgcontainer {
-    width: 250px;
-    height: 250px;
+    width: auto;
+    height: auto;
     margin: 10px;
     border: 3px solid lightgray;
     background-color: black;
@@ -160,7 +160,12 @@ ul a:hover {
     bottom: 10px;
     left: 0px;
     padding: 0;
+    opacity: 75%;
+    pointer-events: none;
 }
+
+/* Pointer Events None usage found from Allisone at https://stackoverflow.com/questions/3680429/click-through-div-to-underlying-elements */
+
 
 .label h3{
     font-family: sans-serif;
@@ -170,6 +175,7 @@ ul a:hover {
     padding: 10px 0px 0px 0px;
     line-height: 5px;
     margin-top: 12px;
+    opacity: 100%;
 }
 
 .label p{
@@ -208,3 +214,164 @@ h4 {
 }
 
 /* On hover scale idea from Lucy Wheel at https://codepen.io/lucy_wheel/pen/VxYzKP */
+
+/* QUERIES */
+
+/* Section Title Breakpoint */
+
+@media (max-width: 1296px) {
+
+.section h2 {
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 3em;
+    width: 1000px;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    margin: 20px;
+    border-right: 0px solid black;
+    border-bottom: 2px solid black;
+}
+    
+}
+
+/* Work Images Breakpoint */
+
+@media (max-width: 1051px) {
+
+    .imgcontainer {
+        width: auto;
+        height: auto;
+        margin: 10px;
+        border: 3px solid lightgray;
+        background-color: black;
+        flex-basis: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+        
+}
+
+/* Navigation Bar / Banner FINAL BREAKPOINT*/
+  
+@media (max-width: 892px) {
+
+    header {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        background-color: grey;
+        padding: 22px 0 22px 0;
+        }
+        
+        header h1 {
+            font-family: sans-serif;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 2.5em;
+            text-align: center;
+            color: black;
+            background-color: lightgrey;
+            border-radius: 0;
+            padding: 10px 20px 10px 20px;
+            width: 100%;
+        }
+        
+        nav {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            padding: 20px 0px 0px 0px;
+            margin: 0 0 0 0;
+        }
+        
+        ul {
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: black;
+            border-bottom: 3px solid black;
+        }
+
+        /* Breakpoint banner change */
+
+        #banner {
+            object-fit: cover;
+            overflow: hidden;
+            flex-basis: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        #banner img {
+            display: none;
+        }
+        
+        #bannerlabel {
+            background-color: transparent;
+            position: unset;
+            color: black;
+            background-color: orange;
+            display: flex;
+            flex-flow: row wrap;
+            padding: 0;
+            border-radius: 0;
+            background-image: url(../images/banner.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #bannerlabel h3 {
+            font-family: sans-serif;
+            font-size: 2em;
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+}
+
+/* Footer Breakpoint */
+
+@media (max-width: 625px) {
+
+    .footerflex {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 1000px;
+        padding: 0px;
+        margin: 5px 0px 20px 0px;
+    }
+
+}
+
+/* FINAL BREAKPOINT */
+
+@media (max-width: 394px) {
+
+    nav {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        padding: 20px 0px 0px 0px;
+        margin: 0 0 0 0;
+    }
+
+    .label {
+        background-color: lightgray;
+        position: absolute;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        width: 100%;
+        bottom: 0;
+        padding: 0;
+        margin: 0;
+        opacity: 75%;
+    }
+}
