@@ -148,6 +148,8 @@ ul a:hover {
     opacity: 70%;
 }
 
+/* bigwork id is meant to set a works img to take up a full row, only applied to first image */
+
 #bigwork {
     flex-basis: 100%;
     width: auto;
@@ -155,6 +157,7 @@ ul a:hover {
 }
 
 /* WORK IMAGE LABELS */
+/* Label is a flexbox containing two rows for H3 and p. Labels should always be a child of imgcontainer */
 
 .label {
     background-color: lightgray;
@@ -169,10 +172,7 @@ ul a:hover {
     pointer-events: none;
 }
 
-/* Pointer Events None usage found from Allisone at https://stackoverflow.com/questions/3680429/click-through-div-to-underlying-elements */
-
-
-.label h3{
+.label h3 {
     font-family: sans-serif;
     font-size: 1.5em;
     font-weight: normal;
@@ -183,7 +183,7 @@ ul a:hover {
     opacity: 100%;
 }
 
-.label p{
+.label p {
     font-family: sans-serif;
     font-size: .9em;
     text-align: center;
@@ -191,6 +191,7 @@ ul a:hover {
 }
 
 /* FOOTER */
+/* h4 is only used in the footer */
 
 .footerflex {
     display: flex;
@@ -227,9 +228,6 @@ h4 a:hover {
     opacity: 100%;
     background-color: black;
 }
-
-/* On hover scale idea from Lucy Wheel at https://codepen.io/lucy_wheel/pen/VxYzKP */
-
 
 /* --------------- BREAKPOINT QUERIES --------------- */
 
@@ -269,36 +267,37 @@ h4 a:hover {
     header {
         flex-flow: column wrap;
         align-items: center;
-        }
+    }
         
-        header h1 {
-            text-align: center;
-            border-radius: 0;
-            padding: 10px 20px 10px 20px;
-            width: 100%;
-        }
-        
-        nav {
-            padding: 20px 0px 0px 0px;
-            margin: 0 0 0 0;
-        }
-        
-        #bannerlabel {
-            background-color: transparent;
-            position: unset;
-            color: rgb(221, 221, 221);
-            border-radius: 0;
-            background-image: url(../images/banner2.svg);
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        
-        #bannerlabel h3 {
-            width: 100%;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
+    header h1 {
+        text-align: center;
+        border-radius: 0;
+        padding: 10px 20px 10px 20px;
+        width: 100%;
+    }
+    
+    nav {
+        padding: 20px 0px 0px 0px;
+        margin: 0 0 0 0;
+    }
+    
+    #bannerlabel {
+        background-color: transparent;
+        position: unset;
+        color: rgb(221, 221, 221);
+        border-radius: 0;
+        background-image: url(../images/banner2.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    /* Ok, so, this bannerlabel breakpoint is a bit funky because I had an idea for it and changed my mind. Keeping it as such in case I would like to reimplement the idea. */
+    
+    #bannerlabel h3 {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
 
 }
 
@@ -335,90 +334,89 @@ h4 a:hover {
 }
 
 /* BREAKPOINT FOR GIGANTIC MONITORS */
+/* works for the most part, not effective on monitors and devices over 3500px */
 
 @media (min-width: 2360px) {
 
     header {
         flex-flow: column wrap;
         align-items: center;
-        }
+    }
 
-        header h1 {
-            font-size: 7em;
-            flex-basis: 100%;
-            text-align: center;
-            border-radius: 20px;
-        }
+    header h1 {
+        font-size: 7em;
+        flex-basis: 100%;
+        text-align: center;
+        border-radius: 20px;
+    }
 
-        nav {
-            align-items: center;
-            padding: 20px 0px 0px 0px;
-        }
-        
-        ul {
-            font-size: 2em;
-            border-bottom: 5px solid silver;
-        }
+    nav {
+        align-items: center;
+        padding: 20px 0px 0px 0px;
+    }
+    
+    ul {
+        font-size: 2em;
+        border-bottom: 5px solid silver;
+    }
 
-        #bannercontainer img {
-            width: 100%;
-        }
-        
-        #bannerlabel h3 {
-            font-size: 6em;
-            padding: 10px 200px 10px 50px;
-        }
+    #bannercontainer img {
+        width: 100%;
+    }
+    
+    #bannerlabel h3 {
+        font-size: 6em;
+        padding: 10px 200px 10px 50px;
+    }
 
-        .section {
-            width: 100%
-        }
-        
-        .section h2 {
-            font-size: 5em;
-            width: 260px;
-            padding-right: 40px;
-            border-right: 3px solid black;
-        }
-        
-        .section p {
-            font-size: 2em;
-            flex-basis: 2000px;
-        }
-        
-        #works {
-            flex-basis: 2000px;
-        }
-        
-        #works img {
-            width: 100%;
-            height: auto;
-        }
-        
-        #bigwork {
-            flex-basis: 100%;
-        }
-        
-        .label {
-            bottom: 30px;
-        }
-               
-        .label h3 {
-            font-size: 3em;
-            padding: 30px 0px 0px 0px;
-            line-height: auto;
-        }
-        
-        .label p {
-            font-size: 1.5em;
-        }
-        
-        /* FOOTER */
-        
-        .footerflex {
-            flex-basis: 2000px;
-        }
-        
-        h4 {
-            font-size: 2.5em;
-        }
+    .section {
+        width: 100%
+    }
+    
+    .section h2 {
+        font-size: 5em;
+        width: 260px;
+        padding-right: 40px;
+        border-right: 3px solid black;
+    }
+    
+    .section p {
+        font-size: 2em;
+        flex-basis: 2000px;
+    }
+    
+    #works {
+        flex-basis: 2000px;
+    }
+    
+    #works img {
+        width: 100%;
+        height: auto;
+    }
+    
+    #bigwork {
+        flex-basis: 100%;
+    }
+    
+    .label {
+        bottom: 30px;
+    }
+            
+    .label h3 {
+        font-size: 3em;
+        padding: 30px 0px 0px 0px;
+        line-height: auto;
+    }
+    
+    .label p {
+        font-size: 1.5em;
+    }
+    
+    .footerflex {
+        flex-basis: 2000px;
+    }
+    
+    h4 {
+        font-size: 2.5em;
+    }
     }
