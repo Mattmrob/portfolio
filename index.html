@@ -10,6 +10,9 @@
 
 <body>
 
+    <!-- HEADER -->
+    <!-- The header contains links that direct to the three sections found on this webpage -->
+
     <header>
         <h1>Matthew M. Roberts</h1>
         <nav>
@@ -28,14 +31,23 @@
         </nav>
     </header>
 
+    <!-- The main container contains all the other content found after the webpage -->
+
     <div id="maincontainer">
 
+        <!-- BANNER -->
+        <!-- The banner container contains the banner img, the banner img is set to cover:fit. The banner label is then placed over the banner image -->
+
         <div id="bannercontainer">
-            <img id="bannerfit" src="assets/images/banner.jpg" alt="A an edited picture of Matthew Roberts in front of the ocean">
+            <img src="assets/images/banner.jpg" alt="A an edited picture of Matthew Roberts in front of the ocean">
             <div id="bannerlabel">
                 <h3>Web Portfolio</h3>
             </div>
         </div>
+
+        <!-- ABOUT ME SECTION -->
+        <!-- Start of the Sections. Each section has the same class so everything lines up. First section is 'about me' -->
+        <!-- Each section is set so the initial flex box + h2 title is aligned to the left while the main content is on the right -->
 
         <div class="section" id="aboutme">
             <h2>About Me</h2>
@@ -45,6 +57,11 @@
                 My Web Design Projects are a work in progress, so please return to this page in the future as new projects are added and the content below is updated.
             </p>
         </div>
+
+        <!-- WORK SECTION -->
+        <!-- After the h2 box, the multiple images are all contained in a single large box, which is then broken into smaller boxes. -->
+        <!-- The first item has the id of bigwork, which allows it to display larger than the others at a large screen breakpoint. -->
+        <!-- Each work section image also has a label which is an additional flexbox set to an absolute position relative to the image container-->
 
         <div class="section" id="work">
             <h2>Work</h2>
@@ -57,28 +74,28 @@
                     </div>
                 </div>
                 <div class="imgcontainer">
-                    <img src="assets/images/pholder1.png" alt=""/>
+                    <img src="assets/images/pholder1.png" alt="Placeholder image for a future project"/>
                     <div class="label">
                         <h3>Project Placeholder</h3>
                         <p>Project to be added</p>
                     </div>
                 </div>
                 <div class="imgcontainer">
-                    <img src="assets/images/pholder1.png" alt=""/>
+                    <img src="assets/images/pholder1.png" alt="Placeholder image for a future project"/>
                     <div class="label">
                         <h3>Project Placeholder</h3>
                         <p>Project to be added</p>
                     </div>
                 </div>
                 <div class="imgcontainer">
-                    <img src="assets/images/pholder1.png" alt=""/>
+                    <img src="assets/images/pholder1.png" alt="Placeholder image for a future project"/>
                     <div class="label">
                         <h3>Project Placeholder</h3>
                         <p>Project to be added</p>
                     </div>
                 </div>
                 <div class="imgcontainer">
-                    <img src="assets/images/pholder1.png" alt=""/>
+                    <img src="assets/images/pholder1.png" alt="Placeholder image for a future project"/>
                     <div class="label">
                         <h3>Project Placeholder</h3>
                         <p>Project to be added</p>
@@ -86,6 +103,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- FOOTER SECTION - has click functionality on two elements -->
 
         <footer class="section" id="contactme">
             <h2>Contact</h2>
