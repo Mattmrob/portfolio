@@ -1,0 +1,422 @@
+/* --------------- HEADER AND NAVBAR --------------- */
+
+header {
+display: flex;
+flex-flow: row wrap;
+justify-content: space-between;
+background-color: rgb(58, 58, 58);
+padding: 22px 0 22px 0;
+}
+
+header h1 {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2.5em;
+    color: black;
+    background-color: silver;
+    padding: 5px 20px 0px 50px;
+    border-radius: 0 20px 20px 0;
+    
+}
+
+nav {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+    padding: 0 50px 0 0;
+}
+
+ul {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: rgb(221, 221, 221);
+    border-bottom: 3px solid silver;
+    margin: 5px 8px 5px 8px;
+    padding: 0;
+}
+
+ul a {
+    color: rgb(221, 221, 221);
+    text-decoration: none;
+}
+
+ul a:hover {
+    color: white;
+}
+
+/* MAIN CONTAINER - Contains all of the non-header sections */
+
+#maincontainer {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* --------------- BANNER --------------- */
+
+#bannercontainer {
+    overflow: hidden;
+    flex-basis: 100%;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+#bannercontainer img {
+    width: 5000px;
+    height: auto;
+    object-fit: cover;
+}
+
+#bannerlabel {
+    background-color: lightgray;
+    position: absolute;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    bottom: 35%;
+    right: 0;
+    padding: 0;
+    border-radius: 20px 0 0 20px;
+}
+
+#bannerlabel h3 {
+    font-family: sans-serif;
+    font-size: 2em;
+    padding: 3px 150px 3px 20px;
+}
+
+/* ------------- SECTIONS START ------------- */
+
+.section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.section h2 {
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 3em;
+    width: 200px;
+    text-align: right;
+    padding: 10px 20px 10px 10px;
+    margin: 20px;
+    border-right: 2px solid black;
+}
+
+/* ABOUT ME PARAGRAPH */
+
+.section p {
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 1.2em;
+    flex-basis: 1000px;
+    text-align: left;
+    padding: 10px;
+    margin: 20px;
+}
+
+/* WORK IMAGES */
+
+#works {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex-basis: 1000px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.imgcontainer {
+    width: auto;
+    height: auto;
+    margin: 10px;
+    border: 3px solid lightgray;
+    background-color: black;
+    flex-basis: 47.95%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#works img {
+    object-fit: cover;
+    opacity: 70%;
+}
+
+/* bigwork id is meant to set a works img to take up a full row, only applied to first image */
+
+#bigwork {
+    flex-basis: 100%;
+    width: auto;
+    height: auto;
+}
+
+/* WORK IMAGE LABELS */
+/* Label is a flexbox containing two rows for H3 and p. Labels should always be a child of imgcontainer */
+
+.label {
+    background-color: lightgray;
+    position: absolute;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    bottom: 10px;
+    left: 0px;
+    padding: 0;
+    opacity: 75%;
+    pointer-events: none;
+}
+
+.label h3 {
+    font-family: sans-serif;
+    font-size: 1.5em;
+    font-weight: normal;
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+    line-height: 5px;
+    margin-top: 12px;
+    opacity: 100%;
+}
+
+.label p {
+    font-family: sans-serif;
+    font-size: .9em;
+    text-align: center;
+    margin: 8px 0px 0px 0px;
+}
+
+/* FOOTER */
+/* h4 is only used in the footer */
+
+.footerflex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-basis: 1000px;
+    padding: 10px;
+    margin: 20px;
+}
+
+h4 {
+    font-family: sans-serif;
+    font-size: 1.2em;
+    font-weight: normal;
+    color: black;
+    text-decoration: none;
+}
+
+h4 a {
+    color: black;
+    text-decoration: none;
+}
+
+h4 a:hover {
+    color: silver;
+}
+
+/* --------------- ANIMATIONS --------------- */
+
+#works img:hover{
+    transform: scale(1.05);
+    transition: all .6s;
+    opacity: 100%;
+    background-color: black;
+}
+
+/* --------------- BREAKPOINT QUERIES --------------- */
+
+/* SECTION TITLES BREAKPOINT */
+
+@media (max-width: 1296px) {
+
+.section h2 {
+    width: 1000px;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    margin: 20px;
+    border-right: 0px solid black;
+    border-bottom: 2px solid black;
+}
+    
+}
+
+/* WORK IMAGES BREAKPOINT */
+
+@media (max-width: 1051px) {
+
+    .imgcontainer {
+        flex-basis: 100%;
+    }
+
+    #works img {
+        width: 100%;
+    }
+        
+}
+
+/* NAVBAR AND BANNER BREAKPOINT*/
+  
+@media (max-width: 892px) {
+
+    header {
+        flex-flow: column wrap;
+        align-items: center;
+    }
+        
+    header h1 {
+        text-align: center;
+        border-radius: 0;
+        padding: 10px 20px 10px 20px;
+        width: 100%;
+    }
+    
+    nav {
+        padding: 20px 0px 0px 0px;
+        margin: 0 0 0 0;
+    }
+    
+    #bannerlabel {
+        background-color: transparent;
+        position: unset;
+        color: rgb(221, 221, 221);
+        border-radius: 0;
+        background-image: url(../images/banner2.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    /* Ok, so, this bannerlabel breakpoint is a bit funky because I had an idea for it and changed my mind. Keeping it as such in case I would like to reimplement the idea. */
+    
+    #bannerlabel h3 {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+/* FOOTER BREAKPOINT */
+
+@media (max-width: 625px) {
+
+    .footerflex {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        margin: 5px 0px 20px 0px;
+    }
+
+}
+
+/* TINY NAV AND WORK IMG LABELS BREAKPOINT */
+
+@media (max-width: 394px) {
+
+    nav {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    .label {
+        position: absolute;
+        flex-flow: row wrap;
+        justify-content: center;
+        width: 100%;
+        bottom: 0;
+    }
+}
+
+/* BREAKPOINT FOR GIGANTIC MONITORS */
+/* works for the most part, not effective on monitors and devices over 3500px */
+
+@media (min-width: 2360px) {
+
+    header {
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 7em;
+        flex-basis: 100%;
+        text-align: center;
+        border-radius: 20px;
+    }
+
+    nav {
+        align-items: center;
+        padding: 20px 0px 0px 0px;
+    }
+    
+    ul {
+        font-size: 2em;
+        border-bottom: 5px solid silver;
+    }
+
+    #bannercontainer img {
+        width: 100%;
+    }
+    
+    #bannerlabel h3 {
+        font-size: 6em;
+        padding: 10px 200px 10px 50px;
+    }
+
+    .section {
+        width: 100%
+    }
+    
+    .section h2 {
+        font-size: 5em;
+        width: 260px;
+        padding-right: 40px;
+        border-right: 3px solid black;
+    }
+    
+    .section p {
+        font-size: 2em;
+        flex-basis: 2000px;
+    }
+    
+    #works {
+        flex-basis: 2000px;
+    }
+    
+    #works img {
+        width: 100%;
+        height: auto;
+    }
+    
+    #bigwork {
+        flex-basis: 100%;
+    }
+    
+    .label {
+        bottom: 30px;
+    }
+            
+    .label h3 {
+        font-size: 3em;
+        padding: 30px 0px 0px 0px;
+        line-height: auto;
+    }
+    
+    .label p {
+        font-size: 1.5em;
+    }
+    
+    .footerflex {
+        flex-basis: 2000px;
+    }
+    
+    h4 {
+        font-size: 2.5em;
+    }
+    }

@@ -16,6 +16,8 @@ The viewer can see several projects, read text, interact with links, and resize 
 ## Credits
 
 Andy Bell for their reset.css document found at https://dev.to/hankchizljaw/a-modern-css-reset-6p3
+Pointer Events None usage found from Allisone at https://stackoverflow.com/questions/3680429/click-through-div-to-underlying-elements
+On hover scale idea from Lucy Wheel at https://codepen.io/lucy_wheel/pen/VxYzKP
 
 ## License
 
