@@ -88,6 +88,7 @@ ul a:hover {
 }
 
 /* ------------- SECTIONS START ------------- */
+/* Flex basis for every right-sided content section is 1000px, and the titles on the left are set to align right.  */
 
 .section {
     display: flex;
@@ -286,12 +287,9 @@ h4 a:hover {
         position: unset;
         color: rgb(221, 221, 221);
         border-radius: 0;
-        background-image: url(../images/banner2.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-color: rgb(58, 58, 58);
     }
-    /* Ok, so, this bannerlabel breakpoint is a bit funky because I had an idea for it and changed my mind. Keeping it as such in case I would like to reimplement the idea. */
-    
+        
     #bannerlabel h3 {
         width: 100%;
         text-align: center;
