@@ -23,4 +23,4 @@ On hover scale idea from Lucy Wheel at https://codepen.io/lucy_wheel/pen/VxYzKP
 
 ## License
 
-N/A
+MIT License
