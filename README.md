@@ -10,8 +10,10 @@ N/A
 
 ## Usage
 
-The page can be found online through the following github pages link: PLACE HERE
+The page can be found online through the following github pages link: https://mattmrob.github.io/portfolio/
 The viewer can see several projects, read text, interact with links, and resize the page as needed.
+![image](assets/images/websitepic1.png)
+![image](assets/images/websitepic2.png)
 
 ## Credits
 

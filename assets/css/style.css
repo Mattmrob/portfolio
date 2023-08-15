@@ -88,6 +88,7 @@ ul a:hover {
 }
 
 /* ------------- SECTIONS START ------------- */
+/* Flex basis for every right-sided content section is 1000px, and the titles on the left are set to align right.  */
 
 .section {
     display: flex;
